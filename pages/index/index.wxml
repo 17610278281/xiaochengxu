@@ -1,13 +1,15 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view class="task-main">
+  <view class="header">我的长期班课</view> 
+  <block wx:for="{{task.list}}" wx:key="item" wx:for-index="idx" class="task-list">  
+    <view class='task-item item-{{item.subject}}' bindtap="btnTo">  
+      <view class='item-title'>{{item.courseName}}</view> 
+      <view>
+        <image></image> 
+        <text class='item-content'>主讲老师:  {{item.teacherName}}</text>
+        <text class='item-content'> {{item.onlineTime}} </text>
+        <span class="subSubject">{{item.subSubject}}</span>  
+      </view>
+    </view>  
+  </block>
 </view>
