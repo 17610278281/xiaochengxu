@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/yilian/yilian"
+  ],
+  "window":{
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "森千色",
+    "navigationBarTextStyle":"black"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "selectedColor": "#44c760",
+    "position": "top",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/yilian/yilian",
+        "text": "一练"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": true  
+}
