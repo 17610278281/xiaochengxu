@@ -16,7 +16,12 @@ Page({
   ,onLoad: function () {
     this.setData({
       task: t.task
-    })
+    });
+    try {
+      wx.setStorageSync('courseId', '123456');
+    } catch (e) {
+      console.log(e);
+    }
   }
   ,onShareAppMessage: function() {
     return {
@@ -32,7 +37,7 @@ Page({
   }
   ,btnTo: function(){
     wx.navigateTo({
-      url: '/pages/calendar/calendar',
+      url: '/pages/exercises/exercises',
     })
   }
 });

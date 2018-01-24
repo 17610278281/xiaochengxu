@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="task-main">
+<view class="task-main" wx:if="{{task.status == 0}}">
   <view class="header">我的长期班课</view> 
   <block wx:for="{{task.list}}" wx:key="item" wx:for-index="idx" class="task-list">  
     <view class='task-item item-{{item.subject}}' bindtap="btnTo">  

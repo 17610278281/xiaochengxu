@@ -31,13 +31,13 @@
   background-color: #4cc760;
 }
 .item-2 {
-  border-left: 12rpx solid #5bb0ff;
+  border-left: 12rpx solid #ffc21f;
 }
 .item-2 span {
   background-color: #ffc21f;
 }
 .item-1 {
-  border-left: 12rpx solid #ffc21f;
+  border-left: 12rpx solid #5bb0ff;
 }
 .item-1 span {
   background-color: #5bb0ff;
@@ -73,4 +73,17 @@ image {
   line-height: 44rpx;
   color: #fff;
   font-size: 25rpx;
+}
+
+.error-text {
+  width: 100%;
+  padding-top: 70%;
+  box-sizing: border-box;
+  background-color: #F2F2F2;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.error-text view {
+  line-height: 48rpx;
 }
