@@ -1,0 +1,29 @@
+<template name="readQuestion">
+  <block>
+    <view class="img-box">
+      <image src="{{question.qImg}}"></image>
+    </view>
+    <view class="title-wrapper">
+      <text class="title">{{question.qTitle}}</text>
+    </view>
+    <view class="desc" bindtap='check'>{{question.qDesc}}</view>
+  </block>
+  <block class="record-wrapper">
+    <view class="score-wrapper">
+      <view wx:if="{{starShow}}" class="star-wrapper">
+        <span class="star">
+          <i class="iconfont icon-star-full full" wx:for="{{starList}}" wx:key="item"></i> 
+        </span>
+      </view>
+    </view>
+    <view bindtap="record" class="record-btn" :class="{typers: isTyper}">
+      <span wx:if="{{isRecord}}" class="icon-luyin iconfont"></span>
+      <i wx:if="{{isMic}}" class="iconfont icon-genduicon1"></i>
+      <image wx:if="{{isTyper}}" class="typer" src="/image/logding.png"></image>
+    </view>
+    <view v-show="listenBtnShow" bindtap="listen" class="listen-btn" href="javascript:;">
+      <!-- <i v-if="islisten" class="iconfont icon-shitingkaobei"></i> -->
+       <i v-else class="iconfont icon-shitingicon"></i> 
+    </view>
+  </block>
+</template>

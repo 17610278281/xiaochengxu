@@ -5,15 +5,14 @@ const app = getApp()
 
 Page({
   data: {
-    motto: '<p>Hello World</p>',
     task: {},
     hasUserInfo: false
   },
   //事件处理函数
   bindViewTap: function() {
     
-  }
-  ,onLoad: function () {
+  },
+  onLoad: function () {
     this.setData({
       task: t.task
     });
@@ -22,20 +21,20 @@ Page({
     } catch (e) {
       console.log(e);
     }
-  }
-  ,onShareAppMessage: function() {
+  },
+  onShareAppMessage: function() {
     return {
       title: '作业帮一课',
       path: '/page/index?id=123'
     }
-  }
-  ,onPullDownRefresh:function () {
+  },
+  onPullDownRefresh:function () {
     wx.stopPullDownRefresh();
-  }
-  ,getTaskList: function() {
+  },
+  getTaskList: function() {
 
-  }
-  ,btnTo: function(){
+  },
+  btnTo: function(){
     wx.navigateTo({
       url: '/pages/exercises/exercises',
     })

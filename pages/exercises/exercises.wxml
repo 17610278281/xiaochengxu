@@ -1,2 +1,10 @@
 <!--pages/exercises/exercises.wxml-->
-<text>pages/exercises/exercises.wxml</text>
+<view class="question-container">
+  <view class="count">
+    <text>{{currentQnum}}</text> /
+    <text class="{{}}">{{ qTotal }} </text>
+  </view> 
+  <import src="/pages/exercises/readQuestion.wxml" />   
+  <template wx:if="{{questionList[currentQnum - 1].qType == 20 || questionList[currentQnum - 1].qType == 21}}" is="readQuestion" data="{{question: questionList[currentQnum - 1], tips: tips, starShow: starShow, starList: starList, isRecord:isRecord, isMic:isMic, isTyper:isTyper}}"/>
+  <span bindtap='next' class="nextBtn">{{isFinish}}</span>
+</view>
